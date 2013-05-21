@@ -10,7 +10,8 @@ if (Meteor.isClient) {
     '/bootstrapDir': 'bootstrapDir',
     '/about': 'about',
     '/contact': 'contact',
-    '/underscorejs': 'underscorejs'
+    '/underscorejs': 'underscorejs',
+    '/repoPage': 'repoPage'
   });
 
 
@@ -39,7 +40,7 @@ if (Meteor.isClient) {
     'click .input-block-level': function(){
       var url = $('.input-block-level').val()
       Meteor.getFilesForRepo(url);
-    } 
+    }
   };
 
   Template.home.events = {
@@ -54,12 +55,9 @@ if (Meteor.isClient) {
     }
   }
 
-  Template.repo_files.events = {
-    'click .underscoreDir': function() {
-        Meteor.Router.to('/underscorejs');
+  'click .goBtn': function() {
+        Meteor.Router.to('/repoPage');
     }
-  };
-
 
   Template.underscoreDir.files = function() {
     return Files.find({});

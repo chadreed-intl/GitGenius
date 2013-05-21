@@ -210,26 +210,12 @@
     </div>
   </template>
 
-  <template name='repo_files'>
-    <div class="filelist">
-    <ul>
-      <li><a href="#">test</a></li>
-      <li><a href="#">CNAME</a></li>
-      <li><a href="#">CONTRIBUTING.md</a></li>
-      <li><a href="#">LICENSE</a></li>
-      <li><a href="#">README.md</a></li>
-      <li><a href="#">Rakefile</a></li>
-      <li><a href="#">index.html</a></li>
-      <li><a href="#">package.json</a></li>
-      <li><a href="#">underscore-min.js</a></li>
-      <li><a href="underscorejs" class="underscorejs">underscore.js</a></li>
-    </ul>
-    </div>
-
-<!--     {{#each files}}
-      <li>file: {{>file_listing}}</li>
-    {{/each}}
- -->
+  <template name="repoPage">
+      <div class="pageTitle">
+        Blank Repository
+      </div>
+      {{>script_tags}}
+      {{>menu_bar}}
   </template>
 
   <template name="file_listing">
